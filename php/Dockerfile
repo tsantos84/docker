@@ -2,8 +2,6 @@ FROM php:7
 
 MAINTAINER Tales Santos <tales.augusto.santos@gmail.com>
 
-RUN usermod -u 1000 www-data
-
 # Packages
 RUN apt-get update && apt-get upgrade -y \
     libicu-dev \
