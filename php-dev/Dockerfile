@@ -21,3 +21,13 @@ RUN wget -c http://static.phpmd.org/php/latest/phpmd.phar \
 RUN wget https://phar.phpunit.de/phpunit.phar \
     && chmod +x phpunit.phar \
     && mv phpunit.phar /usr/local/bin/phpunit
+
+# PHP CodeSniffer
+RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcs.phar \
+    && chmod +x phpcs.phar \
+    && mv phpcs.phar /usr/local/bin/phpcs
+
+# PHP Code Code Beautifier and Fixer
+RUN curl -OL https://squizlabs.github.io/PHP_CodeSniffer/phpcbf.phar \
+    && chmod +x phpcbf.phar \
+    && mv phpcbf.phar /usr/local/bin/phpcbf
