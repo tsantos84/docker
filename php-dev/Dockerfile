@@ -10,7 +10,7 @@ RUN pecl install xdebug \
 
 # PHP Spec
 RUN composer global require phpspec/phpspec:~3.0 \
-    && cp /root/.composer/vendor/bin/phpspec /usr/bin/phpspec
+    && ln -s /root/.composer/vendor/bin/phpspec /usr/bin/phpspec
 
 # PHP Mess Detect
 RUN wget -c http://static.phpmd.org/php/latest/phpmd.phar \
