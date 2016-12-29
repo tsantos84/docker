@@ -38,4 +38,4 @@ RUN php -r "readfile('https://getcomposer.org/installer');" > composer-setup.php
     && mv composer.phar /usr/bin/composer
 
 # Date Timezone
-COPY php.ini /usr/local/etc/php/conf.d/php.ini
+#COPY php.ini /usr/local/etc/php/conf.d/php.ini
