@@ -1,4 +1,4 @@
-FROM php:7
+FROM php:7-fpm
 
 MAINTAINER Tales Santos <tales.augusto.santos@gmail.com>
 
