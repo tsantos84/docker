@@ -1,38 +1,27 @@
 # README #
 
-This repository contains the must personal PHP environment to build PHP applications
+This repository contains my personal PHP environment to build PHP applications locally.
 
 ### What is this repository for? 
 
-* Setup development environment
-* Setup production environment
+* Setup local environment
 
 ### How do I get set up? ###
 
-To run your application using production configuration you need to pull `php` image and run
-it.
+Build the image:
 
-``docker run -it -v $PWD:/opt --workdir=/opt tsantos84/php``
+``docker build -t php .``
 
-Alternatively you can use the `php-dev` image to setup your development environment. This image
-is useful to run automated tests with `phpunit` or `phpspec`. 
+and then run one of the built int command
 
-``docker run -it -v $PWD:/opt --workdir=/opt tsantos84/php-dev phpunit``
-``docker run -it -v $PWD:/opt --workdir=/opt tsantos84/php-dev phpmd ./src``
+``docker run -v $PWD:/app symfony new my-app``
 
 ### What have inside the images ###
 
 #### Production
 
-* PHP 7+
+* PHP 7:latest
 * Git
-* Composer
-
-#### Development
-
-* All configuration from production
+* Composer with Symfony Flex
 * PHPUnit
-* PHPSpec
-* PHPMD
-* PHPCS
-* PHPCBF
+* PHP CS Fixer
