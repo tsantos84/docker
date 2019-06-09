@@ -1,4 +1,4 @@
-FROM php:fpm-alpine AS master
+FROM php:fpm-alpine AS prod
 
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
@@ -19,7 +19,7 @@ COPY tests.sh /var/tests.sh
 
 WORKDIR /app
 
-FROM master AS debug
+FROM prod AS dev
 
 RUN apk add --no-cache $PHPIZE_DEPS \
     && pecl install xdebug \

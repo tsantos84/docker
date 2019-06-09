@@ -1,3 +1,9 @@
 #!/bin/bash
 
-docker build --target $SOURCE_BRANCH -t $IMAGE_NAME -f $DOCKERFILE_PATH .
+TARGET=$CACHE_TAG
+
+if [ $TARGET="latest" ]; then
+    TARGET="prod"
+fi
+
+docker build --target $TARGET -t $IMAGE_NAME -f $DOCKERFILE_PATH .
