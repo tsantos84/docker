@@ -23,6 +23,7 @@ and then run one of the built int command
 * Composer with Symfony Flex
 * PHPUnit
 * PHP CS Fixer
+* Symfony installer
 
 ### Trick
 
