@@ -41,8 +41,8 @@ and run the container from the project directory.
 
 Create an alias to run commands of this images
 
-    echo "alias php='docker run --rm -it -v ${PWD}:/app tsantos84/php $1'" >> ~/.bash_profile
+    echo "alias composer='docker run --rm -it -v ${PWD}:/app tsantos84/php composer $1'" >> ~/.bash_profile
 
 from now you can use the image as an executable:
 
-    php symfony new my-app
+    composer install
