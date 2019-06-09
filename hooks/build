@@ -2,7 +2,7 @@
 
 TARGET=$CACHE_TAG
 
-if [ $TARGET="latest" ]; then
+if [ $TARGET == 'latest' ]; then
     TARGET="prod"
 fi
 
