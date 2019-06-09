@@ -23,3 +23,14 @@ and then run one of the built int command
 * Composer with Symfony Flex
 * PHPUnit
 * PHP CS Fixer
+
+### Trick
+
+Create an alias to run commands of this images
+
+    # ~/.bash_profiler
+    alias php='docker run --rm -it -v ${PWD}:/app php $1'
+
+from now you can use the image as an executable:
+
+    php symfony new my-app
