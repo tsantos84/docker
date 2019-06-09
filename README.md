@@ -18,8 +18,6 @@ and then run one of the built int command
 
 ### What have inside the images ###
 
-#### Production
-
 * PHP 7:latest
 * Git
 * Composer with Symfony Flex
