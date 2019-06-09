@@ -19,4 +19,6 @@ RUN composer global require \
 ENV COMPOSER_ALLOW_SUPERUSER 1
 ENV PATH "$PATH:/root/.composer/vendor/bin:/root/.symfony/bin"
 
+COPY tests.sh /var/tests.sh
+
 WORKDIR /app

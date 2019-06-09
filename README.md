@@ -4,17 +4,29 @@ This repository contains my personal PHP environment to build PHP applications l
 
 ### What is this repository for? 
 
-* Setup local environment for PHP applications
+* Faster composer package install thanks to Symfony Flex
+* Setup new PHP applications thanks to Symfony installer
 
 ### How do I get set up? ###
 
-Build the image:
+You can pull the image from Docker Hub
 
-    docker build -t php .
+    docker pull tsantos84/php
+    
+and run the container from the project directory.
 
-and then run one of the built int command
+    docker run -it --rm -v ${PWD}:/app tsantos84/php composer install
 
-    docker run -v $PWD:/app php symfony new my-app
+### Building the image
+
+Instead of pulling the image from Docker Hub, you can build the image locally:
+
+    git@github.com:tsantos84/docker.git
+    docker build -t php74 .
+
+and run the container from the project directory.
+
+    docker run -it --rm -v ${PWD}:/app php74 symfony new my-app
 
 ### What have inside the images ###
 
@@ -29,7 +41,7 @@ and then run one of the built int command
 
 Create an alias to run commands of this images
 
-    echo "alias php='docker run --rm -it -v ${PWD}:/app php $1'" >> ~/.bash_profile
+    echo "alias php='docker run --rm -it -v ${PWD}:/app tsantos84/php $1'" >> ~/.bash_profile
 
 from now you can use the image as an executable:
 
