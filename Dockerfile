@@ -18,3 +18,10 @@ ENV PATH "$PATH:/root/.composer/vendor/bin:/root/.symfony/bin"
 COPY tests.sh /var/tests.sh
 
 WORKDIR /app
+
+FROM php AS debug
+
+RUN apk add --no-cache $PHPIZE_DEPS \
+    && pecl install xdebug \
+    && docker-php-ext-enable xdebug \
+    && rm -f /var/cache/apk/*
