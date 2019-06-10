@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+docker pull tsantos84/php
+
+echo 'alias php="docker run -it --rm -v ${PWD}:/app tsantos84/php php $1"' >> ~/.bash_profile 
+echo 'alias composer="docker run -it --rm -v ${PWD}:/app tsantos84/php composer $1"' >> ~/.bash_profile 
+echo 'alias symfony="docker run -it --rm -v ${PWD}:/app tsantos84/php symfony $1"' >> ~/.bash_profile 
+echo 'alias phpcs="docker run -it --rm -v ${PWD}:/app tsantos84/php phpcs $1"' >> ~/.bash_profile 
+echo 'alias phpunit="docker run -it --rm -v ${PWD}:/app tsantos84/php phpunit $1"' >> ~/.bash_profile
