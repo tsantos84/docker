@@ -1,4 +1,4 @@
-FROM php:fpm-alpine AS prod
+FROM php:fpm-alpine AS php
 
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
 
