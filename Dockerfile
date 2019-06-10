@@ -19,7 +19,7 @@ COPY tests.sh /var/tests.sh
 
 WORKDIR /app
 
-FROM prod AS dev
+FROM php AS dev
 
 RUN apk add --no-cache $PHPIZE_DEPS \
     && pecl install xdebug \
