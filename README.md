@@ -26,16 +26,16 @@ and run the container from the project directory.
 
 Instead of pulling the image from Docker Hub, you can build the image locally:
 
-    git@github.com:tsantos84/docker.git
-    docker build -t php74 .
+    git clone https://github.com/tsantos84/docker.git && cd docker
+    docker build -t php73 .
 
 and run the container from the project directory.
 
-    docker run -it --rm -v ${PWD}:/app php74 symfony new my-app
+    docker run -it --rm -v ${PWD}:/app php73 symfony new my-app
 
 ### What have inside the images ###
 
-* PHP 7:latest
+* PHP 7.3
 * Git
 * Composer with Symfony Flex
 * PHPUnit
