@@ -11,7 +11,7 @@ This repository contains my personal PHP environment to build PHP applications l
 
 The easiest way to install the image is through the following command:
 
-    curl -sSL https://github.com/tsantos84/docker/releases/download/v1.0-rc/install | bash 
+    curl -sSL https://github.com/tsantos84/docker/releases/download/v1.0/install | bash 
 
 It will pull the image and create the alias on your `~/.bash_profile` automatically for you. 
 
