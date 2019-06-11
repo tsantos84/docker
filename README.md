@@ -13,9 +13,8 @@ The easiest way to install the image is through the following command:
 
     curl -sSL https://github.com/tsantos84/docker/releases/download/v1.0/install | bash 
 
-It will pull the image and create the alias on your `~/.bash_profile` automatically for you. 
-
-Alternatively you can do it by yourself
+It will pull the image and create the alias on your `~/.bash_profile` automatically for you. Alternatively 
+you can do it by yourself:
 
     docker pull tsantos84/php
     
