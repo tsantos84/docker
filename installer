@@ -1,9 +1,18 @@
 #!/usr/bin/env bash
 
-docker pull tsantos84/php
+echo '# Welcome to TSantos PHP image installer'
+echo '# Pulling image from Docker Registry...';
 
-echo 'alias php="docker run -it --rm -v ${PWD}:/app tsantos84/php php $1"' >> ~/.bash_profile
-echo 'alias composer="docker run -it --rm -v ${PWD}:/app tsantos84/php composer $1"' >> ~/.bash_profile
-echo 'alias symfony="docker run -it --rm -v ${PWD}:/app tsantos84/php symfony $1"' >> ~/.bash_profile
-echo 'alias phpcs="docker run -it --rm -v ${PWD}:/app tsantos84/php php-cs-fixer $1"' >> ~/.bash_profile
-echo 'alias phpunit="docker run -it --rm -v ${PWD}:/app tsantos84/php phpunit $1"' >> ~/.bash_profile
+docker pull tsantos84/php &> /dev/null
+
+TARGET="${HOME}/.bashrc"
+
+echo "# Saving alias to "$TARGET" file"
+
+echo 'alias php="docker run -it --rm -v ${PWD}:/app tsantos84/php php $1"' >> $TARGET
+echo 'alias composer="docker run -it --rm -v ${PWD}:/app tsantos84/php composer $1"' >> $TARGET
+echo 'alias symfony="docker run -it --rm -v ${PWD}:/app tsantos84/php symfony $1"' >> $TARGET
+echo 'alias phpcs="docker run -it --rm -v ${PWD}:/app tsantos84/php php-cs-fixer $1"' >> $TARGET
+echo 'alias phpunit="docker run -it --rm -v ${PWD}:/app tsantos84/php phpunit $1"' >> $TARGET
+
+echo "# Done! You can now use the commands php, composer, symfony, phpcs and phpunit directly from your terminal"
