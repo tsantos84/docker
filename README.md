@@ -13,8 +13,8 @@ The easiest way to install the image is through the following command:
 
     curl -sSL https://github.com/tsantos84/docker/releases/download/v1.0/installer | bash 
 
-It will pull the image and create the alias on your `~/.bash_profile` automatically for you. Alternatively 
-you can do it by yourself:
+It will pull the image and create the command aliases in your `~/.bash_profile` automatically. Alternatively 
+you can pull the image by your self:
 
     docker pull tsantos84/php
     
@@ -35,12 +35,12 @@ and run the container from the project directory.
 
 ### What have inside the images ###
 
-* PHP 7.3
-* Git
-* Composer with Symfony Flex
-* PHPUnit
-* PHP CS Fixer
-* Symfony installer
+* [PHP 7.3](https://php.net)
+* [Git](https://git-scm.com/)
+* [Composer](https://getcomposer.org) with [Symfony Flex](https://symfony.com/doc/current/setup/flex.html)
+* [PHPUnit](https://phpunit.de/)
+* [PHP CS Fixer](https://cs.symfony.com/)
+* [Symfony installer](https://symfony.com/download)
 
 ### Trick
 
@@ -51,3 +51,5 @@ Create an alias to run commands of this images
 from now you can use the image as an executable:
 
     composer install
+
+If you install the image through the installer, it will automatically add the alias for you.
